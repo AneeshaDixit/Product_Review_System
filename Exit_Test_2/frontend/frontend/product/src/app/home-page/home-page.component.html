@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg nav fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" style="margin-left: 1rem;" href="home">Best-shop</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/register-product">Register Product</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" id="search" [(ngModel)]="nameSearch"
+          [ngModelOptions]="{standalone: true}" placeholder="Search Product" aria-label="Search">
+      </form>
+
+      <button class="btn btn-danger lout" routerLink="/landing">Logout</button>
+    </div>
+  </div>
+</nav>
+
+<body>
+  <div class="content" style="margin-top: 3rem;">
+    <div fxLayout="row wrap" fxLayoutAlign="left" fxLayoutGap="2%">
+      <mat-card (click)="goToProduct(a.pid)" class="example-card" *ngFor="let a of getproduct | filter:nameSearch"
+        fxFlex="23%" fxLayoutGap="2%">
+        <img mat-card-image [src]="a.image" style="height:15rem;">
+        <mat-card-content>
+          <p>{{a.productName}}</p>
+          <div class="addres_data">
+            <p>{{a.price}}</p>
+            <p>{{a.brand}}</p>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+
+</body>
+

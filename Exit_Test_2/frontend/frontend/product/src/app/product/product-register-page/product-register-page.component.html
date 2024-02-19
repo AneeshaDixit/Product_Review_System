@@ -1,0 +1,72 @@
+<body>
+  <div>
+    <app-nav-bar></app-nav-bar>
+  </div>
+  <div class="container mt-4">
+    <mat-card class="example-card-header mb-2">
+      <p class="header-card-text">Add Product</p>
+    </mat-card>
+    <mat-card class="example-card">
+      <mat-card-content>
+        <div class="row">
+          <form [formGroup]="productForm">
+
+            <div class="row">
+              <label class="col-2 label">Product Name</label>
+              <mat-form-field class="col-10" appearance="outline">
+                <mat-label>Product Name</mat-label>
+                <input matInput placeholder="Placeholder" formControlName="productName">
+              </mat-form-field>
+
+              <label class="col-md-2 label">Brand</label>
+              <mat-form-field class="col-md-3" appearance="outline">
+                <mat-label>Brand</mat-label>
+                <input matInput placeholder="Placeholder" formControlName="brand">
+              </mat-form-field>
+
+              <label class="col-md-3 label">Pin Code</label>
+              
+              <mat-form-field class="example-chip-list" class="col-md-4" appearance="outline">
+                <mat-chip-list #chipList aria-label="Fruit selection" formArrayName="pinCode">
+                  <mat-chip *ngFor="let fruit of fruitControls.value" [selectable]="selectable"
+                    [removable]="removable" (removed)="remove(fruit)">
+                    {{ fruit }}
+                    <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                  </mat-chip>
+                  <input [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                    [matChipInputAddOnBlur]="addOnBlur" (matChipInputTokenEnd)="add($event)" />
+                </mat-chip-list>
+              </mat-form-field>
+              <!-- ===================== -->
+
+              <label class="col-md-2 label">Description</label>
+              <mat-form-field class="col-md-10" appearance="outline">
+                <textarea formControlName="description" matInput></textarea>
+              </mat-form-field>
+
+
+              <label class="col-2 label">Price</label>
+              <mat-form-field class="col-3" appearance="outline">
+                <mat-label>Price</mat-label>
+                <input formControlName="price" matInput placeholder="Placeholder">
+              </mat-form-field>
+              <label class="col-md-3 label">Add Image</label>
+              <div class="col-md-4 mt-3">
+                <!-- <input type="file" (change)="handleFileInput($event.target['files'])" formControlName="image"/> -->
+                <input type="file" (change)="onChange($event)" formControlName="image" />
+                <img [src]="myImage" alt="image" class="show-img">
+              </div>
+            </div>
+          </form>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <div class="button">
+      <button class="btn" (click)="onClickSubmitForm()" mat-raised-button style="background: #43db52">
+        Add
+      </button>
+    </div>
+  </div>
+
+</body>

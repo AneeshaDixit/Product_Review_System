@@ -1,0 +1,23 @@
+.gradient-custom {
+    background-image: url('https://mdbootstrap.com/img/new/textures/full/171.jpg');
+    
+    }
+    
+    .card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+    }
+    .card-registration .select-arrow {
+    top: 13px;
+    }
+
+    .buttonn{
+        display: flex;
+        justify-content: center;
+    }
+    .already-user{
+        display: flex;
+        justify-content: end;
+    }

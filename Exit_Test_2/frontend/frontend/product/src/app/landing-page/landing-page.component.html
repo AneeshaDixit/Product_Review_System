@@ -1,0 +1,142 @@
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <div>
+        <!---Start navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar fixed-top navbar-light">
+
+            <span class="navbar-brand" class=" col-lg-5 col-md-5 col-sm-5 col-12">
+                <!-- <img src="assets/Objects.png" routerLink="" width="50" height="50" class="d-inline-block navbar-brand" alt="logo"> -->
+                <span class="Title navbar-brand tite" routerLink="">The Community</span>
+            </span>
+            <div class="rightNav col-lg-7 col-md-7 col-sm-7 col-12 mt-2">
+                <button mat-raised-button (mouseover)="color = 'primary'" (mouseout)="color = 'accent'" [color]="color"
+                    routerLink="/login">LOGIN</button>
+                <button mat-raised-button class="btn-reg" (mouseover)="color1 = 'primary'"
+                    (mouseout)="color1 = 'accent'" [color]="color1" routerLink="/register">REGISTER </button>
+            </div>
+
+        </nav>
+        <!--- End Navigation Bar -->
+
+        <!--- Start Carousel -->
+        <div class="carousel slide" data-ride="carousel">
+
+            <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="w-100" src="assets/b4.jpg" alt="Image" style="height: 80vh;">
+                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                            <div class="p-3" style="max-width: 900px;">
+                                <h1 class="display-1 text-white mb-md-4 animated zoomIn heading">Welcome to Community
+                                </h1>
+                                <h4 class="text-white text-uppercase mb-3 animated slideInDown">Find Solutions. Ask Questions. Share Ideas. Connect with users across the world.</h4>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="w-100" src="assets/b1.jpg" alt="Image" style="height: 80vh;">
+                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                            <div class="p-3" style="max-width: 900px;">
+                                <h1 class="display-1 text-white mb-md-4 animated zoomIn heading">Welcome to Community
+                                </h1>
+                                <h4 class="text-white text-uppercase mb-3 animated slideInDown">Find Solutions. Ask Questions. Share Ideas. Connect with users across the world.</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="w-100" src="assets/b2.jpg" alt="Image" style="height: 80vh;">
+                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                            <div class="p-3" style="max-width: 900px;">
+                                <h1 class="display-1 text-white mb-md-4 animated zoomIn heading">Welcome to Community
+                                </h1>
+                                <h4 class="text-white text-uppercase mb-3 animated slideInDown">Find Solutions. Ask Questions. Share Ideas. Connect with users across the world.</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="w-100" src="assets/b6.jpg" alt="Image" style="height: 80vh;">
+                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                            <div class="p-3" style="max-width: 900px;">
+                                <h1 class="display-1 text-white mb-md-4 animated zoomIn heading">Welcome to Community
+                                </h1>
+                                <h4 class="text-white text-uppercase mb-3 animated slideInDown">Find Solutions. Ask Questions. Share Ideas. Connect with users across the world.</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+
+            <!--  -->
+
+        </div>
+    </div>
+    <!--- End of Carousel -->
+    <!--- Ristorante-->
+    <div>
+        <div class="container">
+            <div class="row bg-light"><br></div>
+            <div class="row bg-light"><br></div>
+            <div class="row bg-light hover-4 boxes">
+                <div class="col-md-6 description hover-1">
+                    <h3>ELECTRONICS</h3>
+                    <p>
+                        Discover top-quality electronic items, including smartphones, laptops, home entertainment
+                        systems, and smart home gadgets for an enhanced digital experience.</p>
+
+                </div>
+                <div class="col-md-6 image-box">
+                    <img class="img-fluid" src="assets/electronic.jpg" width="200" height="200">
+                </div>
+            </div>
+            <div class="row bg-light"><br></div>
+            <div class="row hover-4 content-mid-body">
+                <div class="col-md-6 order-md-1 order-2 image-box">
+                    <img class="img-fluid " src="assets/fashion.jpg" width="200" height="200">
+                </div>
+                <div class="col-md-6 order-md-12 description order-1">
+                    <h3>FASHION</h3>
+                    <p>
+                        Indulge in style with our exquisite fashion collection, showcasing trendy apparel and
+                        accessories that redefine your personal flair.</p>
+                </div>
+            </div>
+            <div class="row bg-light"><br></div>
+            <div class="row bg-light hover-4">
+                <div class="col-md-6 description hover-1">
+                    <h3>HOME ITEMS</h3>
+                    <p>Transform your living space into a haven of comfort and style with our exceptional home items, designed to elevate your everyday living experience.</p>
+
+                </div>
+                <div class="col-md-6 image-box">
+                    <img class="img-fluid" src="assets/home.jpg" width="200" height="200">
+                </div>
+            </div>
+            <div class="row bg-light"><br></div>
+            <div class="row hover-4 content-mid-body">
+                <div class="col-md-6 order-md-1 order-2 image-box">
+                    <img class="img-fluid " src="assets/beauty.jpg" width="200" height="200">
+                </div>
+                <div class="col-md-6 order-md-12 description order-1">
+                    <h3>BEAUTY, TOYS & MORE</h3>
+                    <p>Discover a world of beauty, excitement, and endless possibilities with our collection of beauty products, captivating toys, and so much more. Unleash your imagination today!</p>
+                </div>
+            </div>
+            <div class="row bg-light"><br></div>
+
+            <!--- End of Ristorante -->
+        </div>
+
+    </div>
+</body>

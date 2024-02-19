@@ -1,0 +1,200 @@
+<app-nav-bar2></app-nav-bar2>
+<section class="vh-100 gradient-custom">
+    <div class="container py-5 h-100">
+        <div class="row justify-content-center align-items-center h-100">
+            <div class="col-12 col-lg-12 col-xl-11">
+                <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+                    <div class="card-body p-4 p-md-5">
+                        <h2 class="mb-4 pb-2 pb-md-0 mb-md-5"><b>Registration</b></h2>
+                        <form [formGroup]="firstFormGroup">
+                            <div class="row justify-content-center align-items-center h-100">
+                                <div class="col-12 col-lg-7 col-xl-6">
+                                    <div class="row">
+                                        <div class="col-md-12 mb-4">
+                                            <span class=" row justify-content-center align-items-center"
+                                                style="font-size: 1rem;">Register with your email and password:</span>
+                                        </div>
+                                        <div class="col-md-12 mb-4">
+                                            <div class="form-outline">
+                                                <label class="form-label" for="email">Email</label>
+                                                <input type="email" id="email" class="form-control form-control"
+                                                    formControlName="email" #email />
+
+                                                <div *ngIf="
+                      firstFormGroup.controls['email'].touched &&
+                      firstFormGroup.controls['email'].invalid">
+                                                    <span *ngIf="
+                        firstFormGroup.controls['email'].errors?.required" style="color: red">Please enter your email*
+                                                    </span>
+                                                    <span *ngIf="
+                        firstFormGroup.controls['email'].errors?.pattern" style="color: red">Provide valid email*
+                                                    </span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4 pb-2">
+
+                                            <div class="form-outline">
+                                                <label class="form-label" for="firstname">First name</label>
+                                                <input type="text" id="firstname" class="form-control form-control"
+                                                    formControlName="firstname" #firstname />
+
+                                                <div *ngIf="
+                                                    firstFormGroup.controls['firstname'].touched &&
+                                                    firstFormGroup.controls['firstname'].invalid">
+                                                    <span *ngIf="
+                                                      firstFormGroup.controls['firstname'].errors?.required"
+                                                        style="color: red">Please enter your
+                                                        firstname*
+                                                    </span>
+                                                    <span *ngIf="
+                                                      firstFormGroup.controls['firstname'].errors?.minlength"
+                                                        style="color: red">Should be min. 2
+                                                        Characters
+                                                    </span>
+                                                    <span *ngIf="
+                                                      firstFormGroup.controls['firstname'].errors?.maxlength"
+                                                        style="color: red">Should be max. 20
+                                                        Characters
+                                                    </span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-6 mb-4 pb-2">
+
+                                            <div class="form-outline">
+                                                <label class="form-label" for="lastname">Last name</label>
+                                                <input type="text" id="lastname" class="form-control form-control"
+                                                    formControlName="lastname" #lastname />
+
+                                                <div *ngIf="
+                                                    firstFormGroup.controls['lastname'].touched &&
+                                                    firstFormGroup.controls['lastname'].invalid">
+                                                    <span *ngIf="
+                                                      firstFormGroup.controls['lastname'].errors?.required"
+                                                        style="color: red">Please enter your
+                                                        lastname*
+                                                    </span>
+                                                    <span *ngIf="
+                                                      firstFormGroup.controls['lastname'].errors?.minlength"
+                                                        style="color: red">Should be min. 2
+                                                        Characters
+                                                    </span>
+                                                    <span *ngIf="
+                                                      firstFormGroup.controls['lastname'].errors?.maxlength"
+                                                        style="color: red">Should be max. 20
+                                                        Characters
+                                                    </span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4 pb-2">
+
+                                            <div class="form-outline">
+                                                <label class="form-label" for="password">Password</label>
+                                                <input type="password" id="password" class="form-control form-control"
+                                                    formControlName="password" #password />
+
+                                                <div *ngIf="
+                                                    firstFormGroup.controls['password'].touched &&
+                                                    firstFormGroup.controls['password'].invalid">
+                                                    <span *ngIf="
+                                                      firstFormGroup.controls['password'].errors?.required"
+                                                        style="color: red">Please enter your
+                                                        password*
+                                                    </span>
+                                                    <span *ngIf="
+                                                      firstFormGroup.controls['password'].errors?.minlength"
+                                                        style="color: red">Should be min. 5
+                                                        Characters
+                                                    </span>
+                                                    <span *ngIf="
+                                                      firstFormGroup.controls['password'].errors?.maxlength"
+                                                        style="color: red">Should be max. 15
+                                                        Characters
+                                                    </span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-6 mb-4 pb-2">
+
+                                            <div class="form-outline">
+                                                <label class="form-label" for="confirmPassword">Confirm Password</label>
+                                                <input type="password" id="confirmPassword"
+                                                    class="form-control form-control" formControlName="confirmPassword"
+                                                    #confirmPassword />
+
+                                                <div *ngIf="
+                                                    firstFormGroup.controls['confirmPassword'].touched &&
+                                                    firstFormGroup.controls['confirmPassword'].invalid">
+                                                    <span *ngIf="
+                                                      firstFormGroup.controls['confirmPassword'].errors?.required"
+                                                        style="color: red">Please enter your
+                                                        confirm password*
+                                                    </span>
+                                                    <span *ngIf="
+                                                      firstFormGroup.controls['confirmPassword'].errors?.minlength"
+                                                        style="color: red">Should be min. 5
+                                                        Characters
+                                                    </span>
+                                                    <span *ngIf="
+                                                      firstFormGroup.controls['confirmPassword'].errors?.maxlength"
+                                                        style="color: red">Should be max. 15
+                                                        Characters
+                                                    </span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-2 pt-2">
+                                        <div class="buttonn">
+                                            <input class="btn btn-dark btn" type="submit" (click)="submitForm()"
+                                                value="Submit" />
+                                        </div>
+
+                                    </div>
+
+                                    <span class="mt-2 pt-2 buttonn" *ngIf="usr_already" style="color: red">
+                                        User Already Exists
+                                    </span>
+                                    <span class="mt-2 pt-2 buttonn" *ngIf="same_pwd" style="color: red">
+                                        Both password must be same
+                                    </span>
+                                    <span class="mt-2 pt-2 buttonn" *ngIf="all_fields" style="color: red">
+                                        All fields are mandatory
+                                    </span>
+                                    <span class="mt-2 pt-2 buttonn" *ngIf="success" style="color: green">
+                                        User Successfully registered
+                                    </span>
+
+                                </div>
+
+                                <div class="mt-2 pt-2">
+                                    <div class="already-user">
+                                        <p> <a href="/login">Have an account already? </a></p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
